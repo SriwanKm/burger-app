@@ -26,10 +26,11 @@ function Item(props) {
 
             <div className="card-content">
                 <div>{ingredient.map(ing => <span className="item-list">{ing}
-                    <a style={{margin: "5px"}}
-                       className="btn-floating btn-small waves-effect waves-light grey darken-3"><i
-                        className="material-icons">add</i>
-                    </a></span>)}
+                    <button style={{margin: "5px"}}
+                       value={ing}
+                       className={active === ing ? "btn-floating btn-small waves-effect waves-light grey" : "btn-floating btn-small waves-effect waves-light grey darken-3"}>
+                        <i className="material-icons">add</i>
+                    </button></span>)}
                 </div>
 
                 <div className="card">
